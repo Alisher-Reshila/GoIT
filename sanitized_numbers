@@ -9,13 +9,13 @@ def normalize_phone(phone: str) -> str:
         return '+' + digits_only[:12]
     
     elif digits_only.startswith('0') and len(digits_only) == 10:
-        return '38' + digits_only
+        return '+38' + digits_only
     
     elif len(digits_only) == 12 and digits_only[2:].startswith('0'):
-        return '38' + digits_only[2:]
+        return '+38' + digits_only[2:]
     
     else:
-        return '380' + digits_only[-10:]
+        return '+380' + digits_only[-10:]
     
 
 raw_numbers = [
